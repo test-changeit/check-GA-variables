@@ -25,4 +25,4 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
 
       - name: last commit user
-        run: echo ${{ toJSON(github.event.head_commit) }}
+        run: echo ${{ github.event.head_commit.author.username }}
