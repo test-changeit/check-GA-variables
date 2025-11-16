@@ -24,6 +24,5 @@ jobs:
           GITHUB_CONTEXT: ${{ toJSON(github.event) }}
         run: echo "$GITHUB_CONTEXT"
 
-      - name: alaki
-        if: ${{ github.event.ref_type == 'tag' }}
-        run: echo ${{ github.event.ref_type }}
+      - name: last commit user
+        run: echo ${{ toJSON(github.event.head_commit) }}
